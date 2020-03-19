@@ -23,6 +23,7 @@
     <ClCompile Include="src\Cluster.cpp" />
     <ClCompile Include="src\KMeans.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\vecotr_os.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Point.h" />

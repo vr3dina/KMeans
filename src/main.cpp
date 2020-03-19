@@ -28,10 +28,7 @@ int main()
 	//string file_path = "res/Text.txt";
 	vector<Point> points = read_data(file_path);
 	auto res = k_means.run(points);
-	for (size_t i = 0; i < res.size(); i++)
-		cout << "============ Cluster # " << i << " ============\n"
-				<< *res[i] << endl << endl;
-
+	cout << res << endl;
 
 	return 0;
 }

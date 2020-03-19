@@ -2,9 +2,9 @@
 #include "vector_os.h"
 #include <iomanip>
 
-Point::Point() 
-{
-}
+//Point::Point() 
+//{
+//}
 
 Point::Point(const std::string& name, const std::vector<double> v) : name(name), values(v), cluster(nullptr)
 {
@@ -24,7 +24,7 @@ Point& Point::operator=(const Point& other)
 
 bool Point::operator==(const Point& other)
 {
-	return values == other.values && name == other.name && cluster == other.cluster;
+	return values == other.values && name == other.name;//&& cluster == other.cluster;
 }
 
 std::ostream& operator << (std::ostream& out, const Point& p)

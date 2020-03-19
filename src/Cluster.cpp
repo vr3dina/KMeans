@@ -13,36 +13,20 @@ Cluster& Cluster::operator=(const Cluster& other)
 	return *this;
 }
 
-//Cluster& Cluster::operator=(Cluster&& other)
-//{
-//	if (this != &other)
-//	{
-//		points = move(other.points);
-//		central_point = move(other.central_point);
-//	}
-//	return *this;
-//}
 
-//Cluster::Cluster()
-//{
-//}
 
-Cluster::Cluster(Point& p) //: central_point(p), points({ p })
+Cluster::Cluster(Point& p) : central_point(p), points({ p })
 {
-	p.cluster = this;
-	central_point = p;
-	points = { p };
 }
+
 
 void Cluster::set_central_point(Point& p)
 {
 	central_point = p;
-	p.cluster = this;
 }
 
 void Cluster::add_point(Point& point)
 {
-	point.cluster = this;
 	points.push_back(point);
 }
 
@@ -74,3 +58,6 @@ ostream& operator << (ostream& out, const Cluster& cluster)
 	out << "Central point: " << cluster.get_central_point() << "\nPoints: " << cluster.get_points();
 	return out;
 }
+
+
+
