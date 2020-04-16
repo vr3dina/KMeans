@@ -5,7 +5,7 @@
 using namespace std;
 
 
-#ifdef _DEBUG
+#ifdef LOG_ITER
 #define LOG cout << "================= iteration # " << iter << " =================\n" << clusters;
 #else
 #define LOG {}

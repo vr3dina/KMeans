@@ -20,13 +20,20 @@ vector<Point> read_data(const string& file_path)
 	}
 	return points;
 }
+
+//#define LOG_ITER //comment this to show results only!
+
 int main()
 {
-	KMeans k_means(3);
+	int k;
+	cout << "Enter cluster clount: ";
+	cin >> k;
+	KMeans k_means(k);
 
 	string file_path = "res/data.txt";
 	//string file_path = "res/Text.txt";
 	vector<Point> points = read_data(file_path);
+	cout << "Input data:" << points << endl << endl;
 	auto res = k_means.run(points);
 	cout << res << endl;
 
